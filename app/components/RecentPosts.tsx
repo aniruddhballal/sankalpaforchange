@@ -32,11 +32,11 @@ const recentPosts = [
     excerpt: 'At 22.2%, Karnataka\'s secondary level school dropout rate is above the national average. This startling figure for Classes 9 and 10…'
   },
   {
-    id: 'importance-of-education',
-    title: 'The Importance Of Education',
+    id: 'mobile-addiction-discussions',
+    title: 'Mobile Addiction Discussions',
     date: 'September 8, 2025',
     category: 'Student- Lifeskills',
-    excerpt: 'At 22.2%, Karnataka\'s secondary level school dropout rate is above the national average. This startling figure for Classes 9 and 10…'
+    excerpt: 'Do school children need to be taught about the ill effects of mobile usage? Well, not really. During a recent workshop…'
   },
 ];
 
@@ -55,7 +55,7 @@ export default function RecentPosts() {
       }}>
         Recent Posts
       </h2>
-      
+
       <div style={{
         display: 'flex',
         flexDirection: 'column',
@@ -76,8 +76,8 @@ export default function RecentPosts() {
             }}>
               {post.date} | {post.category}
             </div>
-            
-            <Link 
+
+            <Link
               href={`/posts/${post.id}`}
               style={{
                 textDecoration: 'none',
@@ -91,13 +91,13 @@ export default function RecentPosts() {
                 cursor: 'pointer',
                 color: '#111827'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#2563eb'}
-              onMouseLeave={(e) => e.currentTarget.style.color = '#111827'}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#2563eb'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#111827'}
               >
                 {post.title}
               </h3>
             </Link>
-            
+
             <p style={{
               fontSize: '14px',
               color: '#4b5563',
@@ -106,8 +106,8 @@ export default function RecentPosts() {
             }}>
               {post.excerpt}
             </p>
-            
-            <Link 
+
+            <Link
               href={`/posts/${post.id}`}
               style={{
                 fontSize: '14px',
