@@ -8,7 +8,7 @@ export default function Home() {
       fontSize: "32px",
       fontWeight: "bold"
     }}>
-      Hello World
+      Hi, This is Sankalpa for Change!
     </main>
   );
 }
