@@ -1,14 +1,32 @@
+import RecentPosts from './components/RecentPosts';
+import Header from './components/Header';
+
 export default function Home() {
   return (
-    <main style={{
-      minHeight: "100vh",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "32px",
-      fontWeight: "bold"
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column'
     }}>
-      Hi, This is Sankalpa for Change!
-    </main>
+      <Header />
+      
+      <div style={{
+        flex: 1,
+        display: 'flex'
+      }}>
+        <main style={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '32px',
+          fontWeight: 'bold'
+        }}>
+          Hi, This is Sankalpa for Change!
+        </main>
+        
+        <RecentPosts />
+      </div>
+    </div>
   );
 }
