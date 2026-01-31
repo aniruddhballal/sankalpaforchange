@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import RecentPosts from '../../components/RecentPosts';
+import PostContent from '../../components/PostContent';
 
 // This will be populated with actual post data
 const posts: Record<string, {
@@ -205,12 +206,8 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
             {post.title}
           </h1>
 
-          <article style={{
-            fontSize: '16px',
-            lineHeight: '1.8',
-            color: '#374151'
-          }}>
-            {post.content}
+          <article>
+            <PostContent content={post.content} />
           </article>
         </main>
         
