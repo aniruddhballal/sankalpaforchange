@@ -165,6 +165,42 @@ Let's continue 𝗰𝗿𝗲𝗮𝘁𝗶𝗻𝗴 𝘀𝗽𝗮𝗰𝗲𝘀 𝘁�
 
 Because sometimes, the best lessons come from those we aim to teach.`
   },
+  'level-up-for-college': {
+    id: 'level-up-for-college',
+    title: 'Level up for College',
+    date: 'October 4, 2025',
+    category: 'Student- Lifeskills',
+    content: `<img src="/images/level up for college.jpeg" alt="Level up for College" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+Yesterday, Shubha and I, representing Sankalpa For Change, had the privilege of spending time with 11th and 12th grade girls at a Government School in Mandya — talking about what it means to level up and take that step toward college.
+
+We explored:
+• Creative & critical thinking through hands-on activities
+• Role plays on how to handle negative peer pressure
+• Honest conversations on the risks of alcohol and the power of informed choices
+
+We closed with few challenging rope activities — that taught students that hope is real, and no challenge is impossible.
+
+What struck me most was the energy in the room — these young women are curious, bold, and eager to imagine bigger futures for themselves. By the end of the session, they walked away not just with helpline numbers, but also with a little more belief in themselves.
+
+Empowering girls through life skills is not just about education; it's about giving them tools to navigate choices, challenges, and opportunities with confidence.
+
+A heartfelt thanks to the school management and to Reshu Bhat for the support and encouragement that made this session meaningful.`
+  },
+  'study-skills-for-high-school': {
+    id: 'study-skills-for-high-school',
+    title: 'Study Skills for High School',
+    date: 'October 4, 2025',
+    category: 'Student- Lifeskills',
+    content: `<img src="/images/study skills for high school.jpeg" alt="Study Skills for High School" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+At Sankalpa For Change, we recently facilitated a session on two vital areas for students — Memory Skills and Time Management — with our 8th and 9th graders.
+
+In the Memory Skills segment, we introduced the SQ3R technique (Survey, Question, Read, Recall, Review) and guided students in creating mind maps to organize and retain information better. The response was enthusiastic, with students realizing how these tools could make studying more structured and effective.
+
+In the Time Management activity, students created pie charts of their daily routines. This exercise gave them a visual picture of how they spend their time. A memorable moment was when one student noticed that her day was completely filled with tasks, leaving very little time for rest — a powerful insight into the need for balance.
+The session was practical, reflective, and impactful — helping students not just with academics, but with life skills they will carry forward.`
+  },
 };
 
 export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {

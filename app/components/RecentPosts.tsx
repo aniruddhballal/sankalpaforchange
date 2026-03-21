@@ -38,6 +38,20 @@ const recentPosts = [
     category: 'Student- Lifeskills',
     excerpt: 'Do school children need to be taught about the ill effects of mobile usage? Well, not really. During a recent workshop…'
   },
+  {
+    id: 'level-up-for-college',
+    title: 'Level up for College',
+    date: 'October 4, 2025',
+    category: 'Student- Lifeskills',
+    excerpt: 'Yesterday, Shubha and I, representing Sankalpa For Change, had the privilege of spending time with 11th and 12th grade girls…'
+  },
+  {
+    id: 'study-skills-for-high-school',
+    title: 'Study Skills for High School',
+    date: 'October 4, 2025',
+    category: 'Student- Lifeskills',
+    excerpt: 'At Sankalpa For Change, we recently facilitated a session on two vital areas for students — Memory Skills and Time Management…'
+  },
 ];
 
 export default function RecentPosts() {
