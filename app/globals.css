@@ -468,7 +468,13 @@ button { font-family: inherit; cursor: pointer; }
   border-top: 1px solid #C5D9C0;
   border-bottom: 1px solid #C5D9C0;
 }
-.mission-strip-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.mission-strip-icon {
+  color: var(--brand-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+}
 .mission-strip p {
   font-size: 16px;
   color: #3D5E36;
@@ -627,7 +633,13 @@ button { font-family: inherit; cursor: pointer; }
   align-items: flex-start;
   gap: 14px;
 }
-.value-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.value-icon {
+  color: var(--brand-amber);
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+}
 .value-title { font-size: 15px; font-weight: 500; color: var(--brand-amber); margin-bottom: 3px; }
 .value-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
@@ -785,7 +797,12 @@ button { font-family: inherit; cursor: pointer; }
   padding: 22px;
   box-shadow: var(--shadow-card);
 }
-.program-icon { font-size: 24px; margin-bottom: 10px; }
+.program-icon {
+  color: var(--brand-saffron);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
 .program-title {
   font-family: var(--font-serif);
   font-size: 18px;
@@ -809,7 +826,14 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: var(--radius-md);
   padding: 16px 20px;
 }
-.value-item-icon { color: var(--brand-saffron); font-size: 12px; margin-top: 6px; flex-shrink: 0; }
+.value-item-icon {
+  color: var(--brand-saffron);
+  font-size: 12px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
 .value-item strong { color: var(--brand-brown); }
 
 /* ============================================================

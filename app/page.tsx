@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import RecentPosts from './components/RecentPosts';
+import { Sprout, Handshake, Heart, Globe } from 'lucide-react';
 
 const featuredPost = {
   id: 'school-is-not-a-burden',
@@ -106,7 +106,7 @@ export default function Home() {
 
       {/* MISSION STRIP */}
       <div className="mission-strip">
-        <span className="mission-strip-icon">🌱</span>
+        <span className="mission-strip-icon"><Sprout size={20} strokeWidth={1.75} /></span>
         <p>
           <strong>Our resolve:</strong> Every child deserves the emotional tools and life skills to navigate their world with confidence, compassion, and resilience.
         </p>
@@ -170,17 +170,17 @@ export default function Home() {
         </div>
         <div className="about-teaser-values">
           <div className="value-card">
-            <div className="value-icon">🤝</div>
+            <div className="value-icon"><Handshake size={20} strokeWidth={1.75} /></div>
             <div className="value-title">Integrity</div>
             <div className="value-desc">Honesty, transparency, and ethical action in all that we do.</div>
           </div>
           <div className="value-card">
-            <div className="value-icon">💛</div>
+            <div className="value-icon"><Heart size={20} strokeWidth={1.75} /></div>
             <div className="value-title">Compassion</div>
             <div className="value-desc">Meeting every child and family with deep empathy and respect.</div>
           </div>
           <div className="value-card">
-            <div className="value-icon">🌐</div>
+            <div className="value-icon"><Globe size={20} strokeWidth={1.75} /></div>
             <div className="value-title">Collaboration</div>
             <div className="value-desc">Working with communities, educators, and mental health professionals.</div>
           </div>

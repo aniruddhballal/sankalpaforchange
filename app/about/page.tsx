@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { Target, Users, ShieldCheck, Brain, HeartHandshake, CheckCircle } from 'lucide-react';
+
 export default function About() {
   return (
     <div className="about-page">
@@ -49,35 +51,35 @@ export default function About() {
 
           <div className="programs-grid">
             <div className="program-card">
-              <div className="program-icon">🎯</div>
+              <div className="program-icon"><Target size={22} strokeWidth={1.75} /></div>
               <h3 className="program-title">Life Skills Coaching</h3>
               <p className="program-desc">
                 Our age-appropriate life skills sessions cover communication, emotional regulation, problem-solving, decision-making, and goal-setting. These are designed to enhance children&apos;s confidence and interpersonal relationships.
               </p>
             </div>
             <div className="program-card">
-              <div className="program-icon">🤝</div>
+              <div className="program-icon"><Users size={22} strokeWidth={1.75} /></div>
               <h3 className="program-title">Mentoring and Group Programs</h3>
               <p className="program-desc">
                 Children facing significant social or emotional difficulties are offered structured mentoring — individually and in peer groups — to help them rediscover connection, belonging, and purpose.
               </p>
             </div>
             <div className="program-card">
-              <div className="program-icon">🛡️</div>
+              <div className="program-icon"><ShieldCheck size={22} strokeWidth={1.75} /></div>
               <h3 className="program-title">Substance Addiction Awareness for Youth</h3>
               <p className="program-desc">
                 We conduct interactive awareness programs for youth to educate them about the risks of substance abuse, empowering them with the knowledge and confidence to make healthy life choices. These sessions are grounded in real-life scenarios, peer discussion, and preventive strategies.
               </p>
             </div>
             <div className="program-card">
-              <div className="program-icon">🧘</div>
+              <div className="program-icon"><Brain size={22} strokeWidth={1.75} /></div>
               <h3 className="program-title">Stress Management for Mental Well-being</h3>
               <p className="program-desc">
                 Our programs focus on building essential life skills while helping participants identify personal stressors and develop healthy coping strategies. Through engaging, participatory activities, we empower children, teens, and adults to manage stress effectively and build emotional resilience.
               </p>
             </div>
             <div className="program-card">
-              <div className="program-icon">🌸</div>
+              <div className="program-icon"><HeartHandshake size={22} strokeWidth={1.75} /></div>
               <h3 className="program-title">Collaborative Programs</h3>
               <p className="program-desc">
                 We run collaborative programs on topics such as menstrual hygiene, child rights, and key legal protections to foster awareness and self-advocacy among adolescent girls. These sessions are often conducted in partnership with healthcare professionals and legal educators.
@@ -100,19 +102,19 @@ export default function About() {
 
           <div className="values-list">
             <div className="value-item">
-              <div className="value-item-icon">✦</div>
+              <div className="value-item-icon"><CheckCircle size={18} strokeWidth={1.75} /></div>
               <div>
                 <strong>Integrity:</strong> We are committed to honesty, transparency, and ethical action in all that we do.
               </div>
             </div>
             <div className="value-item">
-              <div className="value-item-icon">✦</div>
+              <div className="value-item-icon"><CheckCircle size={18} strokeWidth={1.75} /></div>
               <div>
                 <strong>Compassion:</strong> We believe in meeting every child and family with deep empathy and respect.
               </div>
             </div>
             <div className="value-item">
-              <div className="value-item-icon">✦</div>
+              <div className="value-item-icon"><CheckCircle size={18} strokeWidth={1.75} /></div>
               <div>
                 <strong>Collaboration:</strong> We work with local communities, educators, and mental health professionals to maximize our impact.
               </div>

@@ -20,13 +20,13 @@ Today at school, something magical happened.
 
 Thanks to Sankalpa for Change, we had a fun and engaging math session led by Sabitha Rama Pandit, who joined us all the way from the US. With her deep passion for education and experience running a special school, she brought a powerful message: Math isn't just numbers — it's a joyful, equal space for all learners.
 
-She introduced our students to the 24 Game — a clever numbers game where players use basic operations to make 24. We divided the class into Boys vs Girls team, and the classroom lit up with excitement. There were cheers, strategy, and rapid calculations. (The girls won this round! 🎉)
+She introduced our students to the 24 Game — a clever numbers game where players use basic operations to make 24. We divided the class into Boys vs Girls team, and the classroom lit up with excitement. There were cheers, strategy, and rapid calculations. (The girls won this round!)
 
 What did the students learn?
 
-✔️ Basic operations and multiplication tables
-✔️ Quick thinking and logic
-✔️ That math is for everyone — it doesn't care about your gender, background, or labels
+• Basic operations and multiplication tables
+• Quick thinking and logic
+• That math is for everyone — it doesn't care about your gender, background, or labels
 
 Some fun facts we also explored:
 
@@ -72,11 +72,11 @@ This week, we had the joy of engaging with 8th and 9th graders in a session on S
 
 Through discussions, storytelling (thank you Reshma & Shubha !), and reflection activities, students began identifying what actually works for them:
 
-✅ Studying at the same time every day builds rhythm
-✅ Not every subject needs equal time, but all deserve attention
-✅ Revision isn't a luxury — it's a must (at least once a week!)
-✅ Even 'easy' subjects require consistency
-✅ And most importantly: studying needs to become a habit, not a chore
+• Studying at the same time every day builds rhythm
+• Not every subject needs equal time, but all deserve attention
+• Revision isn't a luxury — it's a must (at least once a week!)
+• Even 'easy' subjects require consistency
+• And most importantly: studying needs to become a habit, not a chore
 
 Using a simple "Study Score" activity, the students evaluated their current practices — and were surprised at the room for growth.
 
@@ -212,9 +212,10 @@ This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Paren
 The session brought together a beautiful mix—new parents, parents of teenagers, and even grandparents. For 1.5 hours, the hall was alive with reflection, laughter, and honest sharing.
 
 We explored positive parenting styles, do's and don'ts, and most importantly, stepped into a child's world through activities designed to highlight their problems and unspoken needs.
-💬 Parents shared openly—one spoke about the struggle of balancing work and parenting, another reflected on how comparison unknowingly hurts children.
-💬 A trainer called the session "very interesting."
-💬 And the overall feedback was heartening—participants found the activities "wonderful" and "insightful."
+
+• Parents shared openly—one spoke about the struggle of balancing work and parenting, another reflected on how comparison unknowingly hurts children.
+• A trainer called the session "very interesting."
+• And the overall feedback was heartening—participants found the activities "wonderful" and "insightful."
 
 What I carried back was this: Parenting is less about control and more about connection. When parents pause to listen, love, and care, children feel seen—and that changes everything. Grateful to Sankalpa For Change, to Shubha, and to every participant who made the session meaningful.`,
   },
