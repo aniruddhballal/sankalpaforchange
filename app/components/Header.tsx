@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaYoutube, FaFacebook, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
 const socialLinks = [
-  { icon: FaYoutube, url: 'https://youtube.com', label: 'YouTube' },
+  { icon: FaYoutube, url: 'https://www.youtube.com/@SankalpaForChange', label: 'YouTube' },
   { icon: FaFacebook, url: 'https://facebook.com', label: 'Facebook' },
   { icon: FaXTwitter, url: 'https://x.com', label: 'X' },
   { icon: FaInstagram, url: 'https://instagram.com', label: 'Instagram' },
