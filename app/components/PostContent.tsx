@@ -84,6 +84,13 @@ export default function PostContent({ content }: PostContentProps) {
             );
         }
 
+        // Check if it's HTML content (e.g., img tag)
+        if (trimmedSection.includes('<img')) {
+            return (
+                <div key={index} style={{ marginBottom: '24px' }} dangerouslySetInnerHTML={{ __html: trimmedSection }} />
+            );
+        }
+
         // Regular paragraph
         return (
             <p key={index} style={{

@@ -15,7 +15,9 @@ const posts: Record<string, {
     title: 'Math has no bias',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `Today at school, something magical happened.
+    content: `<img src="/images/math has no bias.jpeg" alt="Math has no bias" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+Today at school, something magical happened.
 
 Thanks to Sankalpa for Change, we had a fun and engaging math session led by Sabitha Rama Pandit, who joined us all the way from the US. With her deep passion for education and experience running a special school, she brought a powerful message: Math isn't just numbers — it's a joyful, equal space for all learners.
 
@@ -42,7 +44,9 @@ We're so grateful to her and Sankalpa for Change for making this day so memorabl
     title: '𝗗𝗼𝗲𝘀 𝗰𝗼𝘂𝗻𝘀𝗲𝗹𝗹𝗶𝗻𝗴 𝗵𝗲𝗹𝗽 𝗰𝗵𝗶𝗹𝗱𝗿𝗲𝗻?',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `Yes, it absolutely does.
+    content: `<img src="/images/does counselling help children.jpeg" alt="Does counselling help children" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+Yes, it absolutely does.
 
 Today, at a government school, counsellors from Sankalpa for Change held space for something powerful:
 Children speaking about their goals, their fears, and the setbacks they rarely say out loud.
@@ -63,7 +67,9 @@ We believe that emotional wellbeing is just as important as academic success —
     title: 'Turning Study into a Habit – One Step at a Time',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `This week, we had the joy of engaging with 8th and 9th graders in a session on Study Skills — and what an insightful time it turned out to be!
+    content: `<img src="/images/turning study into a habit.jpeg" alt="Turning Study into a Habit" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+This week, we had the joy of engaging with 8th and 9th graders in a session on Study Skills — and what an insightful time it turned out to be!
 
 Through discussions, storytelling (thank you Reshma & Shubha !), and reflection activities, students began identifying what actually works for them:
 
@@ -82,7 +88,11 @@ Helping students discover their own strategies is far more powerful than handing
     title: 'School is not a burden',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `At 22.2%, Karnataka's secondary level school dropout rate is above the national average.
+    content: `<img src="/images/school is not a burden.jpeg" alt="School is not a burden" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+<img src="/images/the importance of education 1.jpeg" alt="The importance of education 1" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+<img src="/images/the importance of education 2.jpeg" alt="The importance of education 2" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+At 22.2%, Karnataka's secondary level school dropout rate is above the national average.
 This startling figure for Classes 9 and 10 in 2023–24 places the state among the highest in the country.
 
 But numbers alone don't tell the whole story. Behind every statistic is a child—often at a crossroads, facing difficult choices.
@@ -116,7 +126,10 @@ A seed of self-worth, possibility, and hope.`
     title: 'Mobile Addiction Discussions',
     date: 'September 8, 2025',
     category: 'Student- Lifeskills',
-    content: `"Do school children need to be taught about the ill effects of mobile usage?"
+    content: `<img src="/images/mobile addiction discussions 1.webp" alt="Mobile addiction discussions 1" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+<img src="/images/mobile addiction discussions 2.webp" alt="Mobile addiction discussions 2" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+"Do school children need to be taught about the ill effects of mobile usage?"
 
 Well, not really.
 
@@ -178,7 +191,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
       flexDirection: 'column'
     }}>
       <Header />
-      
+
       <div style={{
         flex: 1,
         display: 'flex'
@@ -210,7 +223,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
             <PostContent content={post.content} />
           </article>
         </main>
-        
+
         <RecentPosts />
       </div>
     </div>
