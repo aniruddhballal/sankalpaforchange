@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand-saffron: #E8722A;
+    --brand-amber: #F5A623;
+    --brand-cream: #FBF6EE;
+    --brand-warm-white: #FFFCF8;
+    --brand-brown: #5C3D2E;
+    --brand-brown-light: #8B6350;
+    --brand-brown-muted: #C4A882;
+    --brand-green: #5A7A52;
+    --brand-green-light: #E8F0E6;
+    --text-primary: #2D1F16;
+    --text-secondary: #6B4F3A;
+    --text-muted: #9C7E68;
+    --bg-page: #FBF6EE;
+    --bg-card: #FFFCF8;
+    --border-color: #EAD9C8;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--brand-saffron);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-icon svg { width: 20px; height: 20px; }
+  .logo-text { font-family: 'Lora', serif; font-size: 17px; font-weight: 600; color: var(--brand-brown); line-height: 1.2; }
+  .logo-sub { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav ul a { color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 400; }
+  .nav-cta { background: var(--brand-saffron); color: #fff !important; padding: 8px 18px; border-radius: 20px; font-weight: 500 !important; font-size: 13px !important; }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 420px;
+    overflow: hidden;
+  }
+  .hero-text {
+    padding: 52px 40px 52px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-card);
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brand-saffron);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--brand-brown);
+    margin-bottom: 18px;
+  }
+  .hero h1 em { font-style: italic; color: var(--brand-saffron); }
+  .hero-body {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    max-width: 340px;
+  }
+  .hero-actions { display: flex; gap: 12px; align-items: center; }
+  .btn-primary {
+    background: var(--brand-saffron);
+    color: #fff;
+    padding: 11px 22px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--brand-brown);
+    padding: 11px 22px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+  }
+  .hero-visual {
+    background: var(--brand-brown);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero-visual-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #8B6350 0%, #5C3D2E 60%, #3A2518 100%);
+  }
+  .hero-visual-pattern {
+    position: absolute; inset: 0; opacity: 0.08;
+    background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .hero-visual-content {
+    position: relative;
+    padding: 28px;
+    width: 100%;
+  }
+  .hero-stat-card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 18px 22px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 12px;
+  }
+  .stat-num { font-family: 'Lora', serif; font-size: 32px; font-weight: 600; color: #fff; line-height: 1; }
+  .stat-label { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 4px; }
+  .stat-row { display: flex; gap: 12px; }
+  .stat-mini { flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 12px; text-align: center; }
+  .stat-mini .n { font-family: 'Lora', serif; font-size: 22px; color: var(--brand-amber); font-weight: 600; }
+  .stat-mini .l { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .hero-label { position: absolute; top: 24px; right: 24px; background: var(--brand-amber); color: #5C3D2E; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding: 5px 12px; border-radius: 12px; }
+
+  /* MISSION STRIP */
+  .mission-strip {
+    padding: 28px 32px;
+    background: var(--brand-green-light);
+    border-top: 1px solid #C5D9C0;
+    border-bottom: 1px solid #C5D9C0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .mission-strip-icon { font-size: 22px; }
+  .mission-strip p { font-size: 14px; color: #3D5E36; font-style: italic; font-family: 'Lora', serif; line-height: 1.6; }
+  .mission-strip strong { font-weight: 600; font-style: normal; }
+
+  /* SECTION */
+  section { padding: 48px 32px; }
+  .section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 28px; }
+  .section-title { font-family: 'Lora', serif; font-size: 24px; font-weight: 600; color: var(--brand-brown); }
+  .section-link { font-size: 13px; color: var(--brand-saffron); text-decoration: none; font-weight: 500; }
+
+  /* FEATURED CARD */
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .featured-card-img {
+    background: #C4A882;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+  }
+  .featured-card-img-inner {
+    position: absolute; inset: 0;
+    background: linear-gradient(160deg, #D4956A 0%, #B07040 50%, #7A4E30 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .img-placeholder-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; text-transform: uppercase; }
+  .featured-card-body { padding: 30px 28px; display: flex; flex-direction: column; justify-content: center; }
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--brand-saffron);
+    background: #FFF0E5;
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .article-tag.green { color: var(--brand-green); background: var(--brand-green-light); }
+  .card-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--brand-brown); line-height: 1.35; margin-bottom: 10px; }
+  .card-excerpt { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 18px; }
+  .card-meta { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text-muted); }
+  .card-meta-dot { width: 3px; height: 3px; background: var(--brand-brown-muted); border-radius: 50%; }
+  .read-more { font-size: 13px; color: var(--brand-saffron); font-weight: 500; text-decoration: none; margin-top: auto; display: flex; align-items: center; gap: 4px; }
+
+  /* ARTICLE GRID */
+  .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .article-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .article-card-img {
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-card-img-inner {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bg-amber { background: linear-gradient(135deg, #E8A86A 0%, #C4784A 100%); }
+  .bg-sage  { background: linear-gradient(135deg, #87A87E 0%, #5A7A52 100%); }
+  .bg-warm  { background: linear-gradient(135deg, #D4956A 0%, #A05D3A 100%); }
+  .bg-terra { background: linear-gradient(135deg, #C4856A 0%, #8B4E35 100%); }
+  .bg-dusty { background: linear-gradient(135deg, #B8A090 0%, #8B7060 100%); }
+  .bg-sun   { background: linear-gradient(135deg, #EFC475 0%, #C49040 100%); }
+
+  .article-card-body { padding: 16px; }
+  .article-card-title { font-family: 'Lora', serif; font-size: 15px; font-weight: 600; color: var(--brand-brown); line-height: 1.4; margin-bottom: 8px; }
+  .article-card-meta { font-size: 11px; color: var(--text-muted); }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: var(--border-color); margin: 0 32px; }
+
+  /* ABOUT TEASER */
+  .about-teaser {
+    background: var(--brand-brown);
+    padding: 52px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .about-teaser h2 { font-family: 'Lora', serif; font-size: 28px; color: #fff; font-weight: 600; margin-bottom: 16px; line-height: 1.3; }
+  .about-teaser h2 em { color: var(--brand-amber); font-style: italic; }
+  .about-teaser p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 24px; }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .team-card { text-align: center; }
+  .team-avatar { width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 8px; border: 2px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 18px; font-weight: 600; color: #fff; }
+  .ta1 { background: #C4784A; }
+  .ta2 { background: #5A7A52; }
+  .ta3 { background: #8B6350; }
+  .team-name { font-size: 12px; color: rgba(255,255,255,0.8); font-weight: 500; }
+  .team-role { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+  /* SOCIAL */
+  .social-bar {
+    padding: 28px 32px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .social-label { font-size: 12px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+  .social-links { display: flex; gap: 10px; }
+  .social-btn {
+    display: flex; align-items: center; gap: 7px;
+    background: var(--bg-page);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .social-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .s-ig { background: #E1306C; }
+  .s-fb { background: #1877F2; }
+  .s-li { background: #0A66C2; }
+  .s-yt { background: #FF0000; }
+
+  /* FOOTER */
+  footer {
+    padding: 28px 32px;
+    background: #2D1F16;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo-text { color: rgba(255,255,255,0.8); }
+  footer .logo-sub { color: rgba(255,255,255,0.35); }
+  footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-mark">
+    <div class="logo-icon">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 2C10 2 4 6 4 11C4 14.314 6.686 17 10 17C13.314 17 16 14.314 16 11C16 6 10 2 10 2Z" fill="white" opacity="0.9"/>
+        <path d="M10 6C10 6 7 8.5 7 11C7 12.657 8.343 14 10 14C11.657 14 13 12.657 13 11C13 8.5 10 6 10 6Z" fill="rgba(255,255,255,0.4)"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text">Sankalpa For Change</div>
+      <div class="logo-sub">Nurturing young minds</div>
+    </div>
+  </div>
+  <ul>
+    <li><a href="#">Our Work</a></li>
+    <li><a href="#">Stories</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#" class="nav-cta">Get Involved</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Education · Wellbeing · Change</div>
+    <h1>Equipping children to <em>thrive</em> in a complex world</h1>
+    <p class="hero-body">We bridge the gap between academic life and emotional well-being — working closely with schools and communities to build meaningful support for every child.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Read Our Stories</button>
+      <button class="btn-outline">About Us →</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-visual-bg"></div>
+    <div class="hero-visual-pattern"></div>
+    <div class="hero-label">Since 2017</div>
+    <div class="hero-visual-content">
+      <div class="hero-stat-card">
+        <div class="stat-num">2,400+</div>
+        <div class="stat-label">Children reached through our programs</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-mini"><div class="n">38</div><div class="l">Schools</div></div>
+        <div class="stat-mini"><div class="n">120</div><div class="l">Workshops</div></div>
+        <div class="stat-mini"><div class="n">14</div><div class="l">Communities</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION STRIP -->
+<div class="mission-strip">
+  <div class="mission-strip-icon">🌱</div>
+  <p><strong>Our resolve:</strong> Every child deserves the emotional tools and life skills to navigate their world with confidence, compassion, and resilience.</p>
+</div>
+
+<!-- FEATURED ARTICLE -->
+<section>
+  <div class="section-header">
+    <div class="section-title">Latest Stories</div>
+    <a href="#" class="section-link">All stories →</a>
+  </div>
+
+  <div class="featured-card">
+    <div class="featured-card-img">
+      <div class="featured-card-img-inner">
+        <span class="img-placeholder-label">Photo · Field Report</span>
+      </div>
+    </div>
+    <div class="featured-card-body">
+      <span class="article-tag">Field Story</span>
+      <h2 class="card-title">When a Circle of Children Learned to Name What They Felt</h2>
+      <p class="card-excerpt">In a government school in Pune, our counselors introduced a simple exercise — name one emotion before the school day begins. What followed changed the classroom forever.</p>
+      <div class="card-meta">
+        <span>March 2025</span>
+        <div class="card-meta-dot"></div>
+        <span>5 min read</span>
+      </div>
+      <a href="#" class="read-more">Read story →</a>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <div class="article-grid">
+    <div class="article-card">
+      <div class="article-card-img">
+        <div class="article-card-img-inner bg-sage">
+          <span class="img-placeholder-label" style="font-size:10px; color:rgba(255,255,255,0.4)">Photo</span>
+        </div>
+      </div>
+      <div class="article-card-body">
+        <span class="article-tag green">Life Skills</span>
+        <div class="article-card-title">Building Empathy, One Classroom at a Time</div>
+        <div class="article-card-meta">Feb 2025 · 4 min</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-img">
+        <div class="article-card-img-inner bg-warm">
+          <span class="img-placeholder-label" style="font-size:10px; color:rgba(255,255,255,0.4)">Photo</span>
+        </div>
+      </div>
+      <div class="article-card-body">
+        <span class="article-tag">Reflection</span>
+        <div class="article-card-title">A Counselor's Notes From the Field</div>
+        <div class="article-card-meta">Jan 2025 · 6 min</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-img">
+        <div class="article-card-img-inner bg-sun">
+          <span class="img-placeholder-label" style="font-size:10px; color:rgba(255,255,255,0.4)">Photo</span>
+        </div>
+      </div>
+      <div class="article-card-body">
+        <span class="article-tag green">Community</span>
+        <div class="article-card-title">How Parents Became Partners in Change</div>
+        <div class="article-card-meta">Dec 2024 · 3 min</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-img">
+        <div class="article-card-img-inner bg-terra">
+          <span class="img-placeholder-label" style="font-size:10px; color:rgba(255,255,255,0.4)">Photo</span>
+        </div>
+      </div>
+      <div class="article-card-body">
+        <span class="article-tag">Youth Voices</span>
+        <div class="article-card-title">"I Didn't Know I Was Allowed to Feel Sad"</div>
+        <div class="article-card-meta">Nov 2024 · 5 min</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-img">
+        <div class="article-card-img-inner bg-dusty">
+          <span class="img-placeholder-label" style="font-size:10px; color:rgba(255,255,255,0.4)">Photo</span>
+        </div>
+      </div>
+      <div class="article-card-body">
+        <span class="article-tag green">Workshop</span>
+        <div class="article-card-title">Inside a Sankalpa Life Skills Workshop</div>
+        <div class="article-card-meta">Oct 2024 · 4 min</div>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-img">
+        <div class="article-card-img-inner bg-amber">
+          <span class="img-placeholder-label" style="font-size:10px; color:rgba(255,255,255,0.4)">Photo</span>
+        </div>
+      </div>
+      <div class="article-card-body">
+        <span class="article-tag">Impact</span>
+        <div class="article-card-title">Annual Report: A Year of Quiet Transformation</div>
+        <div class="article-card-meta">Sep 2024 · 8 min</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT TEASER -->
+<div class="about-teaser">
+  <div>
+    <h2>Started by people who <em>listened</em></h2>
+    <p>Sankalpa for Change began as a heartfelt initiative by educators and counselors who recognised the widening gap between children's academic lives and their emotional well-being.</p>
+    <button class="btn-primary">Meet the Team →</button>
+  </div>
+  <div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar ta1">P</div>
+        <div class="team-name">Priya S.</div>
+        <div class="team-role">Co-founder</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar ta2">R</div>
+        <div class="team-name">Rahul K.</div>
+        <div class="team-role">Lead Counselor</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar ta3">A</div>
+        <div class="team-name">Anita M.</div>
+        <div class="team-role">Program Head</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOCIAL BAR -->
+<div class="social-bar">
+  <span class="social-label">Follow our journey</span>
+  <div class="social-links">
+    <button class="social-btn"><span class="social-dot s-ig"></span>Instagram</button>
+    <button class="social-btn"><span class="social-dot s-fb"></span>Facebook</button>
+    <button class="social-btn"><span class="social-dot s-li"></span>LinkedIn</button>
+    <button class="social-btn"><span class="social-dot s-yt"></span>YouTube</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo-mark">
+    <div class="logo-icon">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 2C10 2 4 6 4 11C4 14.314 6.686 17 10 17C13.314 17 16 14.314 16 11C16 6 10 2 10 2Z" fill="white" opacity="0.9"/>
+        <path d="M10 6C10 6 7 8.5 7 11C7 12.657 8.343 14 10 14C11.657 14 13 12.657 13 11C13 8.5 10 6 10 6Z" fill="rgba(255,255,255,0.4)"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text">Sankalpa For Change</div>
+      <div class="logo-sub">Nurturing young minds</div>
+    </div>
+  </div>
+  <p>© 2025 Sankalpa For Change. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
