@@ -201,6 +201,24 @@ In the Memory Skills segment, we introduced the SQ3R technique (Survey, Question
 In the Time Management activity, students created pie charts of their daily routines. This exercise gave them a visual picture of how they spend their time. A memorable moment was when one student noticed that her day was completely filled with tasks, leaving very little time for rest — a powerful insight into the need for balance.
 The session was practical, reflective, and impactful — helping students not just with academics, but with life skills they will carry forward.`
   },
+  'parental-workshop': {
+    id: 'parental-workshop',
+    title: 'Parental Workshop',
+    date: 'October 4, 2025',
+    category: 'Student- Lifeskills',
+    content: `<img src="/images/parental workshop.jpeg" alt="Parental Workshop" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+
+This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Parenting Workshop with Shubha Dayanand, through Sankalpa For Change.
+
+The session brought together a beautiful mix—new parents, parents of teenagers, and even grandparents. For 1.5 hours, the hall was alive with reflection, laughter, and honest sharing.
+
+We explored positive parenting styles, do’s and don’ts, and most importantly, stepped into a child’s world through activities designed to highlight their problems and unspoken needs.
+💬 Parents shared openly—one spoke about the struggle of balancing work and parenting, another reflected on how comparison unknowingly hurts children.
+💬 A trainer called the session "very interesting."
+💬 And the overall feedback was heartening—participants found the activities "wonderful" and "insightful."
+
+What I carried back was this: Parenting is less about control and more about connection. When parents pause to listen, love, and care, children feel seen—and that changes everything. Grateful to Sankalpa For Change, to Shubha, and to every participant who made the session meaningful.`
+  },
 };
 
 export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {

@@ -52,6 +52,13 @@ const recentPosts = [
     category: 'Student- Lifeskills',
     excerpt: 'At Sankalpa For Change, we recently facilitated a session on two vital areas for students — Memory Skills and Time Management…'
   },
+  {
+    id: 'parental-workshop',
+    title: 'Parental Workshop',
+    date: 'October 4, 2025',
+    category: 'Student- Lifeskills',
+    excerpt: 'This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Parenting Workshop with Shubha Dayanand…'
+  },
 ];
 
 export default function RecentPosts() {
