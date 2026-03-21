@@ -1,36 +1,52 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "./components/Navbar";
+import type { Metadata } from 'next';
+import { Lora, DM_Sans } from 'next/font/google';
+import './globals.css';
+import Navbar from './components/Navbar';
+import Link from 'next/link';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const lora = Lora({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-lora',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-dm-sans',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Sankalpa for Change",
-  description: "Empowering communities through education and life skills",
+  title: 'Sankalpa For Change',
+  description: 'Empowering children through education, life skills, and emotional well-being.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <footer className="footer">
-          <p>&copy; 2025 Sankalpa For Change. All rights reserved.</p>
-        </footer>
+      <body className={`${lora.variable} ${dmSans.variable}`}>
+        <div className="page-wrapper">
+          <Navbar />
+          <main>{children}</main>
+          <footer className="site-footer">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div className="navbar-logo-icon">
+                <svg viewBox="0 0 20 20" fill="none" width="20" height="20">
+                  <path d="M10 2C10 2 4 6 4 11C4 14.314 6.686 17 10 17C13.314 17 16 14.314 16 11C16 6 10 2 10 2Z" fill="white" opacity="0.9"/>
+                  <path d="M10 6C10 6 7 8.5 7 11C7 12.657 8.343 14 10 14C11.657 14 13 12.657 13 11C13 8.5 10 6 10 6Z" fill="rgba(255,255,255,0.4)"/>
+                </svg>
+              </div>
+              <div>
+                <div className="navbar-logo-text">Sankalpa For Change</div>
+                <div className="navbar-logo-sub">Nurturing young minds</div>
+              </div>
+            </div>
+            <p className="footer-copy">© 2025 Sankalpa For Change. All rights reserved.</p>
+          </footer>
+        </div>
       </body>
     </html>
   );

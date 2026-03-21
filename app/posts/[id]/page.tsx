@@ -1,9 +1,7 @@
-import Header from '../../components/Header';
 import RecentPosts from '../../components/RecentPosts';
 import PostContent from '../../components/PostContent';
 import Link from 'next/link';
 
-// This will be populated with actual post data
 const posts: Record<string, {
   id: string;
   title: string;
@@ -16,7 +14,7 @@ const posts: Record<string, {
     title: 'Math has no bias',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/math has no bias.jpeg" alt="Math has no bias" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/math has no bias.jpeg" alt="Math has no bias" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 Today at school, something magical happened.
 
@@ -38,14 +36,14 @@ Some fun facts we also explored:
 Sabitha Rama closed the session with a powerful truth:
 "Math doesn't discriminate. It treats everyone equally."
 
-We're so grateful to her and Sankalpa for Change for making this day so memorable. Here's to more such moments where learning feels like play and every child feels seen.`
+We're so grateful to her and Sankalpa for Change for making this day so memorable. Here's to more such moments where learning feels like play and every child feels seen.`,
   },
   'does-counselling-help-children': {
     id: 'does-counselling-help-children',
     title: '𝗗𝗼𝗲𝘀 𝗰𝗼𝘂𝗻𝘀𝗲𝗹𝗹𝗶𝗻𝗴 𝗵𝗲𝗹𝗽 𝗰𝗵𝗶𝗹𝗱𝗿𝗲𝗻?',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/does counselling help children.jpeg" alt="Does counselling help children" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/does counselling help children.jpeg" alt="Does counselling help children" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 Yes, it absolutely does.
 
@@ -61,14 +59,14 @@ We gently reminded them today:
 
 This is the heart of our work at Sankalpa For Change — creating safe spaces where children can reflect, express, and grow.
 
-We believe that emotional wellbeing is just as important as academic success — and it begins with listening.`
+We believe that emotional wellbeing is just as important as academic success — and it begins with listening.`,
   },
   'turning-study-into-habit': {
     id: 'turning-study-into-habit',
     title: 'Turning Study into a Habit – One Step at a Time',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/turning study into a habit.jpeg" alt="Turning Study into a Habit" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/turning study into a habit.jpeg" alt="Turning Study into a Habit" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 This week, we had the joy of engaging with 8th and 9th graders in a session on Study Skills — and what an insightful time it turned out to be!
 
@@ -82,16 +80,16 @@ Through discussions, storytelling (thank you Reshma & Shubha !), and reflection 
 
 Using a simple "Study Score" activity, the students evaluated their current practices — and were surprised at the room for growth.
 
-Helping students discover their own strategies is far more powerful than handing them a generic rulebook. When the learning feels personal, it sticks.`
+Helping students discover their own strategies is far more powerful than handing them a generic rulebook. When the learning feels personal, it sticks.`,
   },
   'school-is-not-a-burden': {
     id: 'school-is-not-a-burden',
     title: 'School is not a burden',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/school is not a burden.jpeg" alt="School is not a burden" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
-<img src="/images/the importance of education 1.jpeg" alt="The importance of education 1" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
-<img src="/images/the importance of education 2.jpeg" alt="The importance of education 2" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/school is not a burden.jpeg" alt="School is not a burden" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+<img src="/images/the importance of education 1.jpeg" alt="The importance of education 1" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+<img src="/images/the importance of education 2.jpeg" alt="The importance of education 2" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 At 22.2%, Karnataka's secondary level school dropout rate is above the national average.
 This startling figure for Classes 9 and 10 in 2023–24 places the state among the highest in the country.
@@ -120,15 +118,15 @@ We closed with the reminder that knowledge is a treasure no one can steal.
 And for many in the room, school began to feel not like a burden — but like a bridge.
 
 𝗢𝗻𝗲 𝘀𝗲𝘀𝘀𝗶𝗼𝗻 𝗺𝗮𝘆 𝗻𝗼𝘁 𝘀𝗼𝗹𝘃𝗲 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴. 𝗕𝘂𝘁 𝗶𝘁 𝗰𝗮𝗻 𝗽𝗹𝗮𝗻𝘁 𝗮 𝘀𝗲𝗲𝗱.
-A seed of self-worth, possibility, and hope.`
+A seed of self-worth, possibility, and hope.`,
   },
   'mobile-addiction-discussions': {
     id: 'mobile-addiction-discussions',
     title: 'Mobile Addiction Discussions',
     date: 'September 8, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/mobile addiction discussions 1.webp" alt="Mobile addiction discussions 1" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
-<img src="/images/mobile addiction discussions 2.webp" alt="Mobile addiction discussions 2" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/mobile addiction discussions 1.webp" alt="Mobile addiction discussions 1" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+<img src="/images/mobile addiction discussions 2.webp" alt="Mobile addiction discussions 2" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 "Do school children need to be taught about the ill effects of mobile usage?"
 
@@ -164,14 +162,14 @@ This workshop was co-facilitated by our wonderful team — Reshma S Bhat, Divya 
 
 Let's continue 𝗰𝗿𝗲𝗮𝘁𝗶𝗻𝗴 𝘀𝗽𝗮𝗰𝗲𝘀 𝘁𝗵𝗮𝘁 𝗶𝗻𝘃𝗶𝘁𝗲 𝗱𝗶𝗮𝗹𝗼𝗴𝘂𝗲, not just direction.
 
-Because sometimes, the best lessons come from those we aim to teach.`
+Because sometimes, the best lessons come from those we aim to teach.`,
   },
   'level-up-for-college': {
     id: 'level-up-for-college',
     title: 'Level up for College',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/level up for college.jpeg" alt="Level up for College" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/level up for college.jpeg" alt="Level up for College" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 Yesterday, Shubha and I, representing Sankalpa For Change, had the privilege of spending time with 11th and 12th grade girls at a Government School in Mandya — talking about what it means to level up and take that step toward college.
 
@@ -186,39 +184,39 @@ What struck me most was the energy in the room — these young women are curious
 
 Empowering girls through life skills is not just about education; it's about giving them tools to navigate choices, challenges, and opportunities with confidence.
 
-A heartfelt thanks to the school management and to Reshu Bhat for the support and encouragement that made this session meaningful.`
+A heartfelt thanks to the school management and to Reshu Bhat for the support and encouragement that made this session meaningful.`,
   },
   'study-skills-for-high-school': {
     id: 'study-skills-for-high-school',
     title: 'Study Skills for High School',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/study skills for high school.jpeg" alt="Study Skills for High School" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/study skills for high school.jpeg" alt="Study Skills for High School" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 At Sankalpa For Change, we recently facilitated a session on two vital areas for students — Memory Skills and Time Management — with our 8th and 9th graders.
 
 In the Memory Skills segment, we introduced the SQ3R technique (Survey, Question, Read, Recall, Review) and guided students in creating mind maps to organize and retain information better. The response was enthusiastic, with students realizing how these tools could make studying more structured and effective.
 
 In the Time Management activity, students created pie charts of their daily routines. This exercise gave them a visual picture of how they spend their time. A memorable moment was when one student noticed that her day was completely filled with tasks, leaving very little time for rest — a powerful insight into the need for balance.
-The session was practical, reflective, and impactful — helping students not just with academics, but with life skills they will carry forward.`
+The session was practical, reflective, and impactful — helping students not just with academics, but with life skills they will carry forward.`,
   },
   'parental-workshop': {
     id: 'parental-workshop',
     title: 'Parental Workshop',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/parental workshop.jpeg" alt="Parental Workshop" style="width:100%; max-width:600px; height:auto; margin-bottom:20px;" />
+    content: `<img src="/images/parental workshop.jpeg" alt="Parental Workshop" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
 
 This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Parenting Workshop with Shubha Dayanand, through Sankalpa For Change.
 
 The session brought together a beautiful mix—new parents, parents of teenagers, and even grandparents. For 1.5 hours, the hall was alive with reflection, laughter, and honest sharing.
 
-We explored positive parenting styles, do’s and don’ts, and most importantly, stepped into a child’s world through activities designed to highlight their problems and unspoken needs.
+We explored positive parenting styles, do's and don'ts, and most importantly, stepped into a child's world through activities designed to highlight their problems and unspoken needs.
 💬 Parents shared openly—one spoke about the struggle of balancing work and parenting, another reflected on how comparison unknowingly hurts children.
 💬 A trainer called the session "very interesting."
 💬 And the overall feedback was heartening—participants found the activities "wonderful" and "insightful."
 
-What I carried back was this: Parenting is less about control and more about connection. When parents pause to listen, love, and care, children feel seen—and that changes everything. Grateful to Sankalpa For Change, to Shubha, and to every participant who made the session meaningful.`
+What I carried back was this: Parenting is less about control and more about connection. When parents pause to listen, love, and care, children feel seen—and that changes everything. Grateful to Sankalpa For Change, to Shubha, and to every participant who made the session meaningful.`,
   },
 };
 
@@ -228,23 +226,34 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
 
   if (!post) {
     return (
-      <div className="main-content" style={{ textAlign: 'center', padding: '4rem' }}>
+      <div className="not-found">
         <h1>Post not found</h1>
-        <Link href="/" className="btn">Go Home</Link>
+        <Link href="/" className="btn-primary">Go Home</Link>
       </div>
     );
   }
 
   return (
-    <div className="main-content">
-      <article className="post-content">
-        <h1>{post.title}</h1>
-        <p style={{ color: 'var(--gray)', fontSize: '0.9rem' }}>{post.date} • {post.category}</p>
+    <div className="post-page-layout">
+      <article className="post-article">
+        <div className="post-article-header">
+          <Link href="/posts" className="post-back-link">← Back to all stories</Link>
+          <span className="article-tag">{post.category}</span>
+          <h1 className="post-article-title">{post.title}</h1>
+          <div className="post-article-meta">
+            <span>{post.date}</span>
+            <span className="card-meta-dot"></span>
+            <span>{post.category}</span>
+          </div>
+        </div>
         <PostContent content={post.content} />
+        <div className="post-article-footer">
+          <Link href="/posts" className="btn-outline">← All Stories</Link>
+          <Link href="/" className="btn-primary">Back to Home</Link>
+        </div>
       </article>
-      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-        <Link href="/" className="btn">Back to Home</Link>
-      </div>
+
+      <RecentPosts />
     </div>
   );
 }

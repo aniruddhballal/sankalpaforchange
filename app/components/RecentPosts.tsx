@@ -64,16 +64,17 @@ const recentPosts = [
 export default function RecentPosts() {
   return (
     <aside className="sidebar">
-      <h3>Recent Posts</h3>
-      <ul style={{ listStyle: 'none', padding: 0 }}>
+      <div className="sidebar-header">
+        <h3>Recent Posts</h3>
+      </div>
+      <ul className="sidebar-list">
         {recentPosts.map((post) => (
-          <li key={post.id} style={{ marginBottom: '1rem' }}>
-            <Link href={`/posts/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div>
-                <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--accent)' }}>{post.title}</h4>
-                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--gray)' }}>{post.excerpt}</p>
-                <small style={{ color: 'var(--gray)' }}>{post.date}</small>
-              </div>
+          <li key={post.id} className="sidebar-item">
+            <Link href={`/posts/${post.id}`} className="sidebar-link">
+              <span className="sidebar-tag">{post.category}</span>
+              <h4 className="sidebar-title">{post.title}</h4>
+              <p className="sidebar-excerpt">{post.excerpt}</p>
+              <small className="sidebar-date">{post.date}</small>
             </Link>
           </li>
         ))}
