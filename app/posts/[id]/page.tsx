@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import RecentPosts from '../../components/RecentPosts';
 import PostContent from '../../components/PostContent';
+import Link from 'next/link';
 
 // This will be populated with actual post data
 const posts: Record<string, {
@@ -227,58 +228,22 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
 
   if (!post) {
     return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
+      <div className="main-content" style={{ textAlign: 'center', padding: '4rem' }}>
         <h1>Post not found</h1>
+        <Link href="/" className="btn">Go Home</Link>
       </div>
     );
   }
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column'
-    }}>
-      <Header />
-
-      <div style={{
-        flex: 1,
-        display: 'flex'
-      }}>
-        <main style={{
-          flex: 1,
-          padding: '40px 60px',
-          maxWidth: '900px',
-          margin: '0 auto'
-        }}>
-          <div style={{
-            fontSize: '14px',
-            color: '#6b7280',
-            marginBottom: '12px'
-          }}>
-            {post.date} | {post.category}
-          </div>
-
-          <h1 style={{
-            fontSize: '36px',
-            fontWeight: 'bold',
-            marginBottom: '30px',
-            color: '#111827'
-          }}>
-            {post.title}
-          </h1>
-
-          <article>
-            <PostContent content={post.content} />
-          </article>
-        </main>
-
-        <RecentPosts />
+    <div className="main-content">
+      <article className="post-content">
+        <h1>{post.title}</h1>
+        <p style={{ color: 'var(--gray)', fontSize: '0.9rem' }}>{post.date} • {post.category}</p>
+        <PostContent content={post.content} />
+      </article>
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <Link href="/" className="btn">Back to Home</Link>
       </div>
     </div>
   );

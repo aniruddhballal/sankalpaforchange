@@ -93,12 +93,7 @@ export default function PostContent({ content }: PostContentProps) {
 
         // Regular paragraph
         return (
-            <p key={index} style={{
-                fontSize: '16px',
-                lineHeight: '1.8',
-                color: '#374151',
-                marginBottom: '20px'
-            }}>
+            <p key={index} className="post-content-p">
                 {trimmedSection}
             </p>
         );
