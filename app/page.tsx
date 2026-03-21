@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Sprout, Handshake, Heart, Globe } from 'lucide-react';
+import { FaYoutube, FaFacebook, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
 const featuredPost = {
   id: 'school-is-not-a-burden',
@@ -192,16 +193,16 @@ export default function Home() {
         <span className="social-bar-label">Follow our journey</span>
         <div className="social-bar-links">
           <a href="https://www.youtube.com/@SankalpaForChange" target="_blank" rel="noopener noreferrer" className="social-btn">
-            <span className="social-dot s-yt"></span>YouTube
+            <FaYoutube size={16} className="social-btn-icon s-yt" />YouTube
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-btn">
-            <span className="social-dot s-fb"></span>Facebook
+            <FaFacebook size={16} className="social-btn-icon s-fb" />Facebook
           </a>
           <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social-btn">
-            <span className="social-dot s-x"></span>X
+            <FaXTwitter size={16} className="social-btn-icon s-x" />X
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-btn">
-            <span className="social-dot s-ig"></span>Instagram
+            <FaInstagram size={16} className="social-btn-icon s-ig" />Instagram
           </a>
         </div>
       </div>
