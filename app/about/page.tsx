@@ -18,6 +18,8 @@ export default function About() {
                     Sankalpa For Change began as a heartfelt initiative by a group of educators and counselors who recognized the widening gap between children's academic lives and their emotional well-being. Since our inception, we have worked closely with schools and communities to create meaningful support systems for children. Whether through school-based programs or counselling, our focus remains consistent: equipping children with practical life skills and emotional tools to thrive in a complex world.
                 </p>
 
+                <img src="/images/about 1.jpeg" alt="Sankalpa For Change team working with children" style={{ width: '100%', maxWidth: '600px', height: 'auto', marginBottom: '20px', borderRadius: '8px' }} />
+
                 <h2>Our Core Programs and Services</h2>
 
                 <h3>Life Skills Coaching</h3>
@@ -45,6 +47,8 @@ export default function About() {
                     We run collaborative programs on topics such as menstrual hygiene, child rights, and key legal protections to foster awareness and self-advocacy among adolescent girls. These sessions are often conducted in partnership with healthcare professionals and legal educators.
                 </p>
 
+                <img src="/images/about 2.webp" alt="Children participating in Sankalpa For Change programs" style={{ width: '100%', maxWidth: '600px', height: 'auto', marginBottom: '20px', borderRadius: '8px' }} />
+
                 <h2>Our Values</h2>
 
                 <p>
@@ -58,6 +62,8 @@ export default function About() {
                 <p>
                     <strong>Collaboration:</strong> We work with local communities, educators, and mental health professionals to maximize our impact.
                 </p>
+
+                <img src="/images/about 3.jpeg" alt="Sankalpa For Change making a positive impact in communities" style={{ width: '100%', maxWidth: '600px', height: 'auto', marginBottom: '20px', borderRadius: '8px' }} />
             </div>
         </div>
     );
