@@ -1,21 +1,20 @@
 import type { Metadata } from 'next';
-import { Lora, DM_Sans } from 'next/font/google';
+import { Source_Serif_4, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
-import Link from 'next/link';
 
-const lora = Lora({
+const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['400', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-lora',
+  weight: ['400', '600', '700'],
+  style: ['normal'],
+  variable: '--font-serif',
   display: 'swap',
 });
 
-const dmSans = DM_Sans({
+const jakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-dm-sans',
+  weight: ['400', '500', '600'],
+  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} ${dmSans.variable}`}>
+      <body className={`${sourceSerif.variable} ${jakartaSans.variable}`}>
         <div className="page-wrapper">
           <Navbar />
           <main>{children}</main>

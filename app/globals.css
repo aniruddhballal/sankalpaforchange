@@ -33,8 +33,8 @@
   --shadow-card: 0 1px 3px rgba(92,61,46,0.08), 0 4px 16px rgba(92,61,46,0.06);
   --shadow-hover:0 4px 20px rgba(92,61,46,0.14);
 
-  --font-serif: var(--font-lora), Georgia, serif;
-  --font-sans:  var(--font-dm-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans:  var(--font-sans), system-ui, sans-serif;
 
   --max-w: 1120px;
   --page-px: 1.5rem;
@@ -47,8 +47,8 @@ body {
   font-family: var(--font-sans);
   background: var(--bg-page);
   color: var(--text-primary);
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 img { display: block; max-width: 100%; height: auto; }
@@ -107,13 +107,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 .navbar-logo-text {
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--brand-brown);
   line-height: 1.2;
 }
 .navbar-logo-sub {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -129,7 +129,7 @@ button { font-family: inherit; cursor: pointer; }
   gap: 20px;
 }
 .navbar-links a {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   font-weight: 400;
   transition: color 0.2s;
@@ -152,9 +152,9 @@ button { font-family: inherit; cursor: pointer; }
 .navbar-cta {
   background: var(--brand-saffron);
   color: #fff !important;
-  padding: 8px 18px;
+  padding: 9px 20px;
   border-radius: var(--radius-pill);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
   transition: background 0.2s;
@@ -216,9 +216,9 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-block;
   background: var(--brand-saffron);
   color: #fff;
-  padding: 11px 24px;
+  padding: 12px 26px;
   border-radius: var(--radius-pill);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   border: none;
   transition: background 0.2s, transform 0.15s;
@@ -230,9 +230,9 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-block;
   background: transparent;
   color: var(--brand-brown);
-  padding: 11px 24px;
+  padding: 12px 26px;
   border-radius: var(--radius-pill);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   border: 1px solid var(--border);
   transition: border-color 0.2s, background 0.2s;
@@ -244,31 +244,31 @@ button { font-family: inherit; cursor: pointer; }
    ============================================================ */
 .article-tag {
   display: inline-block;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--brand-saffron);
   background: #FFF0E5;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: var(--radius-pill);
   margin-bottom: 10px;
 }
 .article-tag-small {
   display: inline-block;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--brand-green);
   background: var(--brand-green-light);
-  padding: 3px 8px;
+  padding: 3px 10px;
   border-radius: var(--radius-pill);
   margin-bottom: 8px;
 }
 
 .hero-eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand-saffron);
@@ -280,7 +280,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   margin-top: 8px;
   margin-bottom: 16px;
@@ -296,19 +296,19 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
   margin-top: 10px;
 }
 .read-more {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--brand-saffron);
   font-weight: 500;
   margin-top: 12px;
 }
 .read-more-inline {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--brand-saffron);
   font-weight: 500;
 }
@@ -323,6 +323,27 @@ button { font-family: inherit; cursor: pointer; }
 .card-img-terra    { background: linear-gradient(135deg, #C4856A 0%, #8B4E35 100%); }
 .card-img-dusty    { background: linear-gradient(135deg, #B8A090 0%, #8B7060 100%); }
 .card-img-sun      { background: linear-gradient(135deg, #EFC475 0%, #C49040 100%); }
+
+/* Real image fill — covers card containers */
+.card-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.featured-card-img {
+  min-height: 260px;
+  overflow: hidden;
+}
+.article-card-img {
+  height: 180px;
+  overflow: hidden;
+}
+.post-page-card-img {
+  height: 200px;
+  overflow: hidden;
+}
 
 /* ============================================================
    HOMEPAGE — HERO
@@ -350,7 +371,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .hero-heading em { font-style: italic; color: var(--brand-saffron); }
 .hero-body {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 28px;
@@ -389,25 +410,36 @@ button { font-family: inherit; cursor: pointer; }
 }
 .hero-stats {
   position: relative;
-  padding: 24px;
+  padding: 28px 24px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-.hero-stat-card {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
+.hero-mission-block {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
   border-radius: var(--radius-lg);
-  padding: 18px 22px;
-  margin-bottom: 12px;
+  padding: 18px 20px;
 }
-.stat-num {
-  font-family: var(--font-serif);
-  font-size: 32px;
+.hero-mission-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-amber);
   font-weight: 600;
-  color: #fff;
-  line-height: 1;
+  margin-bottom: 8px;
 }
-.stat-label { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 5px; }
-.stat-row { display: flex; gap: 10px; }
+.hero-mission-text {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.65;
+}
+.hero-stat-row-real {
+  display: flex;
+  gap: 10px;
+}
 .stat-mini {
   flex: 1;
   background: rgba(255,255,255,0.08);
@@ -422,7 +454,7 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--brand-amber);
   font-weight: 600;
 }
-.stat-mini-label { font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+.stat-mini-label { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; }
 
 /* ============================================================
    MISSION STRIP
@@ -438,11 +470,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 .mission-strip-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
 .mission-strip p {
-  font-size: 14px;
+  font-size: 16px;
   color: #3D5E36;
-  font-style: italic;
-  font-family: var(--font-serif);
-  line-height: 1.65;
+  font-family: var(--font-sans);
+  line-height: 1.7;
 }
 .mission-strip strong { font-weight: 600; font-style: normal; }
 
@@ -517,7 +548,7 @@ button { font-family: inherit; cursor: pointer; }
   margin-bottom: 10px;
 }
 .featured-card-excerpt {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.75;
 }
@@ -543,16 +574,16 @@ button { font-family: inherit; cursor: pointer; }
 .article-card-body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
 .article-card-title {
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--brand-brown);
   line-height: 1.4;
   margin-bottom: 7px;
 }
 .article-card-excerpt {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
   flex: 1;
 }
 
@@ -577,7 +608,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .about-teaser-heading em { color: var(--brand-amber); font-style: italic; }
 .about-teaser-text p {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255,255,255,0.68);
   line-height: 1.85;
   margin-bottom: 26px;
@@ -597,8 +628,8 @@ button { font-family: inherit; cursor: pointer; }
   gap: 14px;
 }
 .value-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-.value-title { font-size: 14px; font-weight: 500; color: var(--brand-amber); margin-bottom: 3px; }
-.value-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+.value-title { font-size: 15px; font-weight: 500; color: var(--brand-amber); margin-bottom: 3px; }
+.value-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
 /* ============================================================
    SOCIAL BAR
@@ -614,7 +645,7 @@ button { font-family: inherit; cursor: pointer; }
   gap: 14px;
 }
 .social-bar-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -628,8 +659,8 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--bg-page);
   border: 1px solid var(--border);
   border-radius: var(--radius-pill);
-  padding: 7px 14px;
-  font-size: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
   color: var(--text-secondary);
   font-weight: 500;
   transition: border-color 0.2s, color 0.2s;
@@ -693,10 +724,10 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.2;
 }
 .about-hero-sub {
-  font-size: 16px;
+  font-size: 17px;
   color: rgba(255,255,255,0.65);
-  font-style: italic;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 .about-content {
@@ -709,7 +740,7 @@ button { font-family: inherit; cursor: pointer; }
   margin-bottom: 48px;
 }
 .about-intro p {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.85;
   margin-bottom: 20px;
@@ -726,7 +757,7 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 2px solid var(--border);
 }
 .about-section > p {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.85;
   margin-bottom: 16px;
@@ -757,20 +788,20 @@ button { font-family: inherit; cursor: pointer; }
 .program-icon { font-size: 24px; margin-bottom: 10px; }
 .program-title {
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--brand-brown);
   margin-bottom: 8px;
   line-height: 1.35;
 }
-.program-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+.program-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.75; }
 
 .values-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
 .value-item {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.75;
   background: var(--bg-card);
@@ -798,10 +829,10 @@ button { font-family: inherit; cursor: pointer; }
   margin-bottom: 10px;
 }
 .posts-page-sub {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-secondary);
-  font-style: italic;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 .posts-page-grid {
@@ -825,16 +856,16 @@ button { font-family: inherit; cursor: pointer; }
 .post-page-card-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
 .post-page-card-title {
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--brand-brown);
   line-height: 1.4;
   margin-bottom: 8px;
 }
 .post-page-card-excerpt {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.7;
   flex: 1;
 }
 
@@ -855,7 +886,7 @@ button { font-family: inherit; cursor: pointer; }
 .post-article-header { margin-bottom: 32px; }
 .post-back-link {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
   margin-bottom: 16px;
   transition: color 0.2s;
@@ -874,7 +905,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-muted);
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border);
@@ -890,10 +921,10 @@ button { font-family: inherit; cursor: pointer; }
 /* Post content body */
 .post-content-body { }
 .post-paragraph {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--text-secondary);
   line-height: 1.9;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .post-bold-para {
   font-weight: 600;
@@ -901,26 +932,26 @@ button { font-family: inherit; cursor: pointer; }
 }
 .post-blockquote {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
   color: var(--brand-brown);
   border-left: 3px solid var(--brand-saffron);
-  padding: 12px 20px;
-  margin: 28px 0;
+  padding: 14px 24px;
+  margin: 32px 0;
   background: #FFF8F2;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
 }
-.post-section { margin-bottom: 22px; }
+.post-section { margin-bottom: 24px; }
 .post-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 22px 0;
+  margin: 0 0 24px 0;
 }
 .post-list-item {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-secondary);
   line-height: 1.8;
-  padding: 6px 0 6px 4px;
+  padding: 8px 0 8px 4px;
   border-bottom: 1px solid var(--border);
 }
 .post-list-item:last-child { border-bottom: none; }
@@ -954,14 +985,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sidebar-header h3 {
   font-family: var(--font-serif);
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--brand-brown);
 }
 .sidebar-list { list-style: none; padding: 0; }
 .sidebar-item {
   border-bottom: 1px solid var(--border);
-  padding: 12px 0;
+  padding: 14px 0;
 }
 .sidebar-item:last-child { border-bottom: none; }
 .sidebar-link {
@@ -973,7 +1004,7 @@ button { font-family: inherit; cursor: pointer; }
 .sidebar-link:hover { opacity: 0.75; }
 .sidebar-tag {
   display: block;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brand-saffron);
@@ -982,19 +1013,19 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sidebar-title {
   font-family: var(--font-serif);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--brand-brown);
   line-height: 1.35;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 .sidebar-excerpt {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 4px;
 }
-.sidebar-date { font-size: 11px; color: var(--text-muted); }
+.sidebar-date { font-size: 12px; color: var(--text-muted); }
 
 /* ============================================================
    NOT FOUND
@@ -1082,11 +1113,11 @@ button { font-family: inherit; cursor: pointer; }
   .navbar-logo-text { font-size: 14px; }
 
   /* Hero */
-  .hero-heading { font-size: 26px; }
-  .hero-body { font-size: 14px; }
+  .hero-heading { font-size: 28px; }
+  .hero-body { font-size: 16px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .hero-stats { padding: 16px; }
-  .stat-num { font-size: 26px; }
+  .stat-num { font-size: 28px; }
 
   /* Posts grid → 1 col */
   .posts-grid-home { grid-template-columns: 1fr; }
@@ -1108,9 +1139,9 @@ button { font-family: inherit; cursor: pointer; }
 
   /* Post article */
   .post-page-layout { padding: 24px var(--page-px); }
-  .post-article-title { font-size: 24px; }
-  .post-paragraph { font-size: 15px; }
-  .post-blockquote { font-size: 16px; }
+  .post-article-title { font-size: 26px; }
+  .post-paragraph { font-size: 16px; }
+  .post-blockquote { font-size: 17px; }
   .post-article-footer { flex-direction: column; }
 
   /* Social bar */

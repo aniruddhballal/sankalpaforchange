@@ -7,7 +7,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'Today at school, something magical happened. Thanks to Sankalpa for Change, we had a fun and engaging math session led…',
-    colorClass: 'card-img-amber',
+    image: '/images/math has no bias.jpeg',
   },
   {
     id: 'does-counselling-help-children',
@@ -15,7 +15,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'Yes, it absolutely does. Today, at a government school, counsellors from Sankalpa for Change held space for something powerful: Children speaking…',
-    colorClass: 'card-img-sage',
+    image: '/images/does counselling help children.jpeg',
   },
   {
     id: 'turning-study-into-habit',
@@ -23,7 +23,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'This week, we had the joy of engaging with 8th and 9th graders in a session on Study Skills —…',
-    colorClass: 'card-img-warm',
+    image: '/images/turning study into a habit.jpeg',
   },
   {
     id: 'school-is-not-a-burden',
@@ -31,7 +31,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'At 22.2%, Karnataka\'s secondary level school dropout rate is above the national average. This startling figure for Classes 9 and 10…',
-    colorClass: 'card-img-featured',
+    image: '/images/school is not a burden.jpeg',
   },
   {
     id: 'mobile-addiction-discussions',
@@ -39,7 +39,7 @@ const allPosts = [
     date: 'September 8, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'Do school children need to be taught about the ill effects of mobile usage? Well, not really. During a recent workshop…',
-    colorClass: 'card-img-terra',
+    image: '/images/mobile addiction discussions 1.webp',
   },
   {
     id: 'level-up-for-college',
@@ -47,7 +47,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'Yesterday, Shubha and I, representing Sankalpa For Change, had the privilege of spending time with 11th and 12th grade girls…',
-    colorClass: 'card-img-dusty',
+    image: '/images/level up for college.jpeg',
   },
   {
     id: 'study-skills-for-high-school',
@@ -55,7 +55,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'At Sankalpa For Change, we recently facilitated a session on two vital areas for students — Memory Skills and Time Management…',
-    colorClass: 'card-img-sun',
+    image: '/images/study skills for high school.jpeg',
   },
   {
     id: 'parental-workshop',
@@ -63,7 +63,7 @@ const allPosts = [
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
     excerpt: 'This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Parenting Workshop with Shubha Dayanand…',
-    colorClass: 'card-img-amber',
+    image: '/images/parental workshop.jpeg',
   },
 ];
 
@@ -79,7 +79,9 @@ export default function Posts() {
       <div className="posts-page-grid">
         {allPosts.map((post) => (
           <Link key={post.id} href={`/posts/${post.id}`} className="post-page-card">
-            <div className={`post-page-card-img ${post.colorClass}`}></div>
+            <div className="post-page-card-img">
+              <img src={post.image} alt={post.title} className="card-real-img" />
+            </div>
             <div className="post-page-card-body">
               <span className="article-tag-small">{post.category}</span>
               <h2 className="post-page-card-title">{post.title}</h2>
