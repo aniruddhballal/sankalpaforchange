@@ -61,14 +61,20 @@ const recentPosts = [
   },
 ];
 
-export default function RecentPosts() {
+interface RecentPostsProps {
+  currentPostId?: string;
+}
+
+export default function RecentPosts({ currentPostId }: RecentPostsProps) {
+  const filtered = recentPosts.filter(post => post.id !== currentPostId);
+
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <h3>Recent Posts</h3>
+        <h3>More Stories</h3>
       </div>
       <ul className="sidebar-list">
-        {recentPosts.map((post) => (
+        {filtered.map((post) => (
           <li key={post.id} className="sidebar-item">
             <Link href={`/posts/${post.id}`} className="sidebar-link">
               <span className="sidebar-tag">{post.category}</span>

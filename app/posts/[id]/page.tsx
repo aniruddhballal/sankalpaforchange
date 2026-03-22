@@ -2,6 +2,9 @@ import RecentPosts from '../../components/RecentPosts';
 import PostContent from '../../components/PostContent';
 import Link from 'next/link';
 
+const IMG = (src: string, alt: string) =>
+  `<img src="${src}" alt="${alt}" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />`;
+
 const posts: Record<string, {
   id: string;
   title: string;
@@ -14,7 +17,7 @@ const posts: Record<string, {
     title: 'Math has no bias',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/math has no bias.jpeg" alt="Math has no bias" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/math has no bias.jpeg', 'Math has no bias')}
 
 Today at school, something magical happened.
 
@@ -38,12 +41,13 @@ Sabitha Rama closed the session with a powerful truth:
 
 We're so grateful to her and Sankalpa for Change for making this day so memorable. Here's to more such moments where learning feels like play and every child feels seen.`,
   },
+
   'does-counselling-help-children': {
     id: 'does-counselling-help-children',
     title: '𝗗𝗼𝗲𝘀 𝗰𝗼𝘂𝗻𝘀𝗲𝗹𝗹𝗶𝗻𝗴 𝗵𝗲𝗹𝗽 𝗰𝗵𝗶𝗹𝗱𝗿𝗲𝗻?',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/does counselling help children.jpeg" alt="Does counselling help children" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/does counselling help children.jpeg', 'Does counselling help children')}
 
 Yes, it absolutely does.
 
@@ -61,12 +65,13 @@ This is the heart of our work at Sankalpa For Change — creating safe spaces wh
 
 We believe that emotional wellbeing is just as important as academic success — and it begins with listening.`,
   },
+
   'turning-study-into-habit': {
     id: 'turning-study-into-habit',
     title: 'Turning Study into a Habit – One Step at a Time',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/turning study into a habit.jpeg" alt="Turning Study into a Habit" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/turning study into a habit.jpeg', 'Turning Study into a Habit')}
 
 This week, we had the joy of engaging with 8th and 9th graders in a session on Study Skills — and what an insightful time it turned out to be!
 
@@ -82,14 +87,13 @@ Using a simple "Study Score" activity, the students evaluated their current prac
 
 Helping students discover their own strategies is far more powerful than handing them a generic rulebook. When the learning feels personal, it sticks.`,
   },
+
   'school-is-not-a-burden': {
     id: 'school-is-not-a-burden',
     title: 'School is not a burden',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/school is not a burden.jpeg" alt="School is not a burden" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
-<img src="/images/the importance of education 1.jpeg" alt="The importance of education 1" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
-<img src="/images/the importance of education 2.jpeg" alt="The importance of education 2" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/school is not a burden.jpeg', 'School is not a burden')}
 
 At 22.2%, Karnataka's secondary level school dropout rate is above the national average.
 This startling figure for Classes 9 and 10 in 2023–24 places the state among the highest in the country.
@@ -105,6 +109,8 @@ This week, through Sankalpa For Change, we held a life skills session with stude
 What followed was a moving, real conversation.
 Students shared their dreams, their doubts, and even quotes that inspired them.
 
+${IMG('/images/the importance of education 1.jpeg', 'The importance of education')}
+
 One student quietly said:
 "The roots of education are bitter, but the fruit is sweet."
 
@@ -115,18 +121,20 @@ Another shift happened toward the end of the session. A deeper realisation took 
 
 We closed with the reminder that knowledge is a treasure no one can steal.
 
+${IMG('/images/the importance of education 2.jpeg', 'Education session')}
+
 And for many in the room, school began to feel not like a burden — but like a bridge.
 
 𝗢𝗻𝗲 𝘀𝗲𝘀𝘀𝗶𝗼𝗻 𝗺𝗮𝘆 𝗻𝗼𝘁 𝘀𝗼𝗹𝘃𝗲 𝗲𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴. 𝗕𝘂𝘁 𝗶𝘁 𝗰𝗮𝗻 𝗽𝗹𝗮𝗻𝘁 𝗮 𝘀𝗲𝗲𝗱.
 A seed of self-worth, possibility, and hope.`,
   },
+
   'mobile-addiction-discussions': {
     id: 'mobile-addiction-discussions',
     title: 'Mobile Addiction Discussions',
     date: 'September 8, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/mobile addiction discussions 1.webp" alt="Mobile addiction discussions 1" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
-<img src="/images/mobile addiction discussions 2.webp" alt="Mobile addiction discussions 2" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/mobile addiction discussions 1.webp', 'Mobile addiction discussions')}
 
 "Do school children need to be taught about the ill effects of mobile usage?"
 
@@ -144,6 +152,8 @@ Without any prompting, the children responded:
 • And one even warned — "It can be dangerous if a mobile bursts!"
 
 They also spoke about addiction.
+
+${IMG('/images/mobile addiction discussions 2.webp', 'Mobile addiction workshop')}
 
 When we flipped the question and asked about the benefits of mobile phones, they shared:
 
@@ -164,12 +174,13 @@ Let's continue 𝗰𝗿𝗲𝗮𝘁𝗶𝗻𝗴 𝘀𝗽𝗮𝗰𝗲𝘀 𝘁�
 
 Because sometimes, the best lessons come from those we aim to teach.`,
   },
+
   'level-up-for-college': {
     id: 'level-up-for-college',
     title: 'Level up for College',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/level up for college.jpeg" alt="Level up for College" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/level up for college.jpeg', 'Level up for College')}
 
 Yesterday, Shubha and I, representing Sankalpa For Change, had the privilege of spending time with 11th and 12th grade girls at a Government School in Mandya — talking about what it means to level up and take that step toward college.
 
@@ -186,26 +197,29 @@ Empowering girls through life skills is not just about education; it's about giv
 
 A heartfelt thanks to the school management and to Reshu Bhat for the support and encouragement that made this session meaningful.`,
   },
+
   'study-skills-for-high-school': {
     id: 'study-skills-for-high-school',
     title: 'Study Skills for High School',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/study skills for high school.jpeg" alt="Study Skills for High School" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/study skills for high school.jpeg', 'Study Skills for High School')}
 
 At Sankalpa For Change, we recently facilitated a session on two vital areas for students — Memory Skills and Time Management — with our 8th and 9th graders.
 
 In the Memory Skills segment, we introduced the SQ3R technique (Survey, Question, Read, Recall, Review) and guided students in creating mind maps to organize and retain information better. The response was enthusiastic, with students realizing how these tools could make studying more structured and effective.
 
 In the Time Management activity, students created pie charts of their daily routines. This exercise gave them a visual picture of how they spend their time. A memorable moment was when one student noticed that her day was completely filled with tasks, leaving very little time for rest — a powerful insight into the need for balance.
+
 The session was practical, reflective, and impactful — helping students not just with academics, but with life skills they will carry forward.`,
   },
+
   'parental-workshop': {
     id: 'parental-workshop',
     title: 'Parental Workshop',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    content: `<img src="/images/parental workshop.jpeg" alt="Parental Workshop" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />
+    content: `${IMG('/images/parental workshop.jpeg', 'Parental Workshop')}
 
 This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Parenting Workshop with Shubha Dayanand, through Sankalpa For Change.
 
@@ -254,7 +268,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
         </div>
       </article>
 
-      <RecentPosts />
+      <RecentPosts currentPostId={id} />
     </div>
   );
 }
