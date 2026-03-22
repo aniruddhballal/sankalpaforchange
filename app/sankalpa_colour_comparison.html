@@ -1,0 +1,162 @@
+
+<style>
+  .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 8px 0; }
+  .panel { border-radius: var(--border-radius-lg); overflow: hidden; border: 0.5px solid var(--color-border-tertiary); }
+  .panel-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 16px; background: var(--color-background-secondary); color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .swatch-row { display: flex; gap: 0; }
+  .swatch { flex: 1; height: 48px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; }
+  .section-mock { padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .mock-nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; }
+  .mock-logo { font-size: 13px; font-weight: 600; }
+  .mock-cta { font-size: 11px; font-weight: 500; padding: 5px 12px; border-radius: 999px; }
+  .mock-hero { padding: 20px 14px; }
+  .mock-eyebrow { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; margin-bottom: 6px; }
+  .mock-h1 { font-size: 18px; font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+  .mock-body { font-size: 11px; line-height: 1.6; margin-bottom: 12px; }
+  .mock-btn { display: inline-block; font-size: 11px; font-weight: 500; padding: 7px 14px; border-radius: 999px; }
+  .mock-card { border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+  .mock-card-img { height: 40px; }
+  .mock-card-body { padding: 8px 10px; }
+  .mock-card-tag { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; display: inline-block; padding: 2px 7px; border-radius: 999px; margin-bottom: 4px; }
+  .mock-card-title { font-size: 12px; font-weight: 600; line-height: 1.3; }
+  .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 14px; }
+  .palette-strip { padding: 10px 14px; }
+  .palette-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+  .palette-swatch { width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0; }
+  .palette-info { font-size: 10px; color: var(--color-text-secondary); }
+  .palette-name { font-weight: 500; color: var(--color-text-primary); font-size: 11px; }
+</style>
+
+<div class="wrap">
+
+  <div class="panel">
+    <div class="panel-label">Option A — Heavy / Full strength</div>
+
+    <div style="background:#1B3A8C;">
+      <div class="mock-nav">
+        <span class="mock-logo" style="color:#fff;">Sankalpa For Change</span>
+        <span class="mock-cta" style="background:#F07820;color:#fff;">Get Involved</span>
+      </div>
+    </div>
+
+    <div class="mock-hero" style="background:#F07820;">
+      <div class="mock-eyebrow" style="color:rgba(255,255,255,0.75);">Education · Wellbeing · Change</div>
+      <div class="mock-h1" style="color:#fff;">Equipping children to thrive</div>
+      <div class="mock-body" style="color:rgba(255,255,255,0.8);">We bridge the gap between academic life and emotional well-being.</div>
+      <span class="mock-btn" style="background:#1B3A8C;color:#fff;">Read Our Stories</span>
+    </div>
+
+    <div style="padding:10px 14px;background:#fff;">
+      <div class="cards-row" style="padding:0;">
+        <div class="mock-card" style="border:1px solid #ddd;">
+          <div class="mock-card-img" style="background:#1B3A8C;"></div>
+          <div class="mock-card-body" style="background:#fff;">
+            <span class="mock-card-tag" style="background:#F07820;color:#fff;">Lifeskills</span>
+            <div class="mock-card-title" style="color:#111;">Math has no bias</div>
+          </div>
+        </div>
+        <div class="mock-card" style="border:1px solid #ddd;">
+          <div class="mock-card-img" style="background:#F07820;"></div>
+          <div class="mock-card-body" style="background:#fff;">
+            <span class="mock-card-tag" style="background:#1B3A8C;color:#fff;">Lifeskills</span>
+            <div class="mock-card-title" style="color:#111;">Does counselling help?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-strip" style="background:var(--color-background-secondary);border-top:0.5px solid var(--color-border-tertiary);">
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#1B3A8C;"></div>
+        <div><div class="palette-name">Navy #1B3A8C</div><div class="palette-info">Nav, hero bg, accents</div></div>
+      </div>
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#F07820;"></div>
+        <div><div class="palette-name">Orange #F07820</div><div class="palette-info">Hero bg, CTAs, tags</div></div>
+      </div>
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#fff;border:1px solid #ddd;"></div>
+        <div><div class="palette-name">White</div><div class="palette-info">Cards, body bg</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-label">Option B — Tinted / Light surfaces (recommended)</div>
+
+    <div style="background:#fff;border-bottom:1px solid #E8DFD0;">
+      <div class="mock-nav">
+        <span class="mock-logo" style="color:#1B3A8C;">Sankalpa For Change</span>
+        <span class="mock-cta" style="background:#F07820;color:#fff;">Get Involved</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;">
+      <div class="mock-hero" style="background:#fff;">
+        <div class="mock-eyebrow" style="color:#F07820;">Education · Wellbeing · Change</div>
+        <div class="mock-h1" style="color:#1B3A8C;">Equipping children to thrive</div>
+        <div class="mock-body" style="color:#4A5568;">We bridge the gap between academic life and emotional well-being.</div>
+        <span class="mock-btn" style="background:#F07820;color:#fff;">Read Our Stories</span>
+      </div>
+      <div style="background:#1B3A8C;padding:14px;display:flex;flex-direction:column;gap:8px;">
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:10px;">
+          <div style="font-size:10px;color:#F07820;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;">Our Vision</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.85);line-height:1.5;">To create a better society by nurturing human potential.</div>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <div style="flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#F07820;">X</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.5);">Schools</div>
+          </div>
+          <div style="flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px;text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#F07820;">X</div>
+            <div style="font-size:9px;color:rgba(255,255,255,0.5);">Workshops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#EEF2FF;border-top:1px solid #D0D9F0;border-bottom:1px solid #D0D9F0;padding:8px 14px;">
+      <div style="font-size:11px;color:#1B3A8C;line-height:1.5;"><strong>Our resolve:</strong> Every child deserves the emotional tools and life skills to navigate their world with confidence.</div>
+    </div>
+
+    <div style="padding:10px 14px;background:#FAFAF8;">
+      <div class="cards-row" style="padding:0;">
+        <div class="mock-card" style="border:1px solid #E8DFD0;background:#fff;">
+          <div class="mock-card-img" style="background:#C8D4F0;"></div>
+          <div class="mock-card-body">
+            <span class="mock-card-tag" style="background:#FFF0E0;color:#C05A00;">Lifeskills</span>
+            <div class="mock-card-title" style="color:#1B3A8C;">Math has no bias</div>
+          </div>
+        </div>
+        <div class="mock-card" style="border:1px solid #E8DFD0;background:#fff;">
+          <div class="mock-card-img" style="background:#C8D4F0;"></div>
+          <div class="mock-card-body">
+            <span class="mock-card-tag" style="background:#FFF0E0;color:#C05A00;">Lifeskills</span>
+            <div class="mock-card-title" style="color:#1B3A8C;">Does counselling help?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-strip" style="background:var(--color-background-secondary);border-top:0.5px solid var(--color-border-tertiary);">
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#F07820;"></div>
+        <div><div class="palette-name">Orange #F07820</div><div class="palette-info">CTAs, icons, eyebrows, highlights</div></div>
+      </div>
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#1B3A8C;"></div>
+        <div><div class="palette-name">Navy #1B3A8C</div><div class="palette-info">Headings, hero panel, footer</div></div>
+      </div>
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#EEF2FF;border:1px solid #D0D9F0;"></div>
+        <div><div class="palette-name">Navy tint #EEF2FF</div><div class="palette-info">Mission strip, section accents</div></div>
+      </div>
+      <div class="palette-row">
+        <div class="palette-swatch" style="background:#FAFAF8;border:1px solid #E8DFD0;"></div>
+        <div><div class="palette-name">Warm white #FAFAF8</div><div class="palette-info">Page bg, card surfaces</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
