@@ -2,16 +2,7 @@ import Link from 'next/link';
 import { Sprout, Handshake, Heart, Globe } from 'lucide-react';
 import { FaYoutube, FaFacebook, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 
-const featuredPost = {
-  id: 'school-is-not-a-burden',
-  title: 'School is not a burden',
-  date: 'October 4, 2025',
-  category: 'Student- Lifeskills',
-  excerpt: 'At 22.2%, Karnataka\'s secondary level school dropout rate is above the national average. Behind every statistic is a child — often at a crossroads, facing difficult choices. This week, a life skills session changed the room.',
-  image: '/images/school is not a burden.jpeg',
-};
-
-const gridPosts = [
+const previewPosts = [
   {
     id: 'math-has-no-bias',
     title: 'Math has no bias',
@@ -29,45 +20,28 @@ const gridPosts = [
     image: '/images/does counselling help children.jpeg',
   },
   {
-    id: 'turning-study-into-habit',
-    title: 'Turning Study into a Habit - One Step at a Time',
+    id: 'school-is-not-a-burden',
+    title: 'School is not a burden',
     date: 'October 4, 2025',
     category: 'Student- Lifeskills',
-    excerpt: 'This week, we had the joy of engaging with 8th and 9th graders in a session on Study Skills…',
-    image: '/images/turning study into a habit.jpeg',
-  },
-  {
-    id: 'mobile-addiction-discussions',
-    title: 'Mobile Addiction Discussions',
-    date: 'September 8, 2025',
-    category: 'Student- Lifeskills',
-    excerpt: 'Do school children need to be taught about the ill effects of mobile usage? Well, not really. During a recent workshop…',
-    image: '/images/mobile addiction discussions 1.webp',
-  },
-  {
-    id: 'level-up-for-college',
-    title: 'Level up for College',
-    date: 'October 4, 2025',
-    category: 'Student- Lifeskills',
-    excerpt: 'Yesterday, Shubha and I had the privilege of spending time with 11th and 12th grade girls in Mandya…',
-    image: '/images/level up for college.jpeg',
-  },
-  {
-    id: 'parental-workshop',
-    title: 'Parental Workshop',
-    date: 'October 4, 2025',
-    category: 'Student- Lifeskills',
-    excerpt: 'This week in Suvarna Badavane, I had the joy of co-facilitating a Positive Parenting Workshop with Shubha Dayanand…',
-    image: '/images/parental workshop.jpeg',
+    excerpt: "At 22.2%, Karnataka's secondary level school dropout rate is above the national average. Behind every statistic is a child — often at a crossroads, facing difficult choices.",
+    image: '/images/school is not a burden.jpeg',
   },
 ];
 
 export default function Home() {
   return (
     <div>
+
       {/* HERO */}
-      <section className="hero-split">
-        <div className="hero-text">
+      <section className="hero-fullimg">
+        <img
+          src="/images/parental workshop.jpeg"
+          alt="Sankalpa For Change — community session"
+          className="hero-fullimg-photo"
+        />
+        <div className="hero-fullimg-overlay"></div>
+        <div className="hero-fullimg-content">
           <div className="hero-eyebrow">Education · Wellbeing · Change</div>
           <h1 className="hero-heading">
             Equipping children to <em>thrive</em> in a complex world
@@ -77,30 +51,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link href="/posts" className="btn-primary">Read Our Stories</Link>
-            <Link href="/about" className="btn-outline">About Us →</Link>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-visual-bg"></div>
-          <div className="hero-visual-pattern"></div>
-          <div className="hero-stats">
-            <div className="hero-mission-block">
-              <div className="hero-mission-label">Our Vision</div>
-              <p className="hero-mission-text">
-                To create a better society by nurturing human potential, particularly in young children.
-              </p>
-            </div>
-            <div className="hero-mission-block">
-              <div className="hero-mission-label">Our Focus</div>
-              <p className="hero-mission-text">
-                Equipping children with practical life skills and emotional tools to thrive in a complex world.
-              </p>
-            </div>
-            <div className="hero-stat-row-real">
-              <div className="stat-mini"><div className="stat-mini-num">X</div><div className="stat-mini-label">Schools</div></div>
-              <div className="stat-mini"><div className="stat-mini-num">X</div><div className="stat-mini-label">Workshops</div></div>
-              <div className="stat-mini"><div className="stat-mini-num">X</div><div className="stat-mini-label">Communities</div></div>
-            </div>
+            <Link href="/about" className="btn-outline-white">About Us →</Link>
           </div>
         </div>
       </section>
@@ -113,34 +64,14 @@ export default function Home() {
         </p>
       </div>
 
-      {/* LATEST POSTS */}
+      {/* LATEST STORIES — 3 posts */}
       <section className="home-posts-section">
         <div className="section-header">
           <h2 className="section-title">Latest Stories</h2>
           <Link href="/posts" className="section-link">All stories →</Link>
         </div>
-
-        {/* Featured post */}
-        <Link href={`/posts/${featuredPost.id}`} className="featured-card">
-          <div className="featured-card-img">
-            <img src={featuredPost.image} alt={featuredPost.title} className="card-real-img" />
-          </div>
-          <div className="featured-card-body">
-            <span className="article-tag">Field Story</span>
-            <h2 className="featured-card-title">{featuredPost.title}</h2>
-            <p className="featured-card-excerpt">{featuredPost.excerpt}</p>
-            <div className="card-meta">
-              <span>{featuredPost.date}</span>
-              <span className="card-meta-dot"></span>
-              <span>{featuredPost.category}</span>
-            </div>
-            <span className="read-more">Read story →</span>
-          </div>
-        </Link>
-
-        {/* Grid */}
         <div className="posts-grid-home">
-          {gridPosts.map((post) => (
+          {previewPosts.map((post) => (
             <Link key={post.id} href={`/posts/${post.id}`} className="article-card">
               <div className="article-card-img">
                 <img src={post.image} alt={post.title} className="card-real-img" />
@@ -151,6 +82,7 @@ export default function Home() {
                 <p className="article-card-excerpt">{post.excerpt}</p>
                 <div className="card-meta-small">
                   <span>{post.date}</span>
+                  <span className="read-more-inline">Read more →</span>
                 </div>
               </div>
             </Link>
@@ -206,6 +138,7 @@ export default function Home() {
           </a>
         </div>
       </div>
+
     </div>
   );
 }
