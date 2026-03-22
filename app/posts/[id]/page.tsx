@@ -1,6 +1,7 @@
 import RecentPosts from '../../components/RecentPosts';
 import PostContent from '../../components/PostContent';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 const IMG = (src: string, alt: string) =>
   `<img src="${src}" alt="${alt}" style="width:100%; max-width:700px; height:auto; margin-bottom:28px; border-radius:12px;" />`;
@@ -234,6 +235,80 @@ We explored positive parenting styles, do's and don'ts, and most importantly, st
 What I carried back was this: Parenting is less about control and more about connection. When parents pause to listen, love, and care, children feel seen—and that changes everything. Grateful to Sankalpa For Change, to Shubha, and to every participant who made the session meaningful.`,
   },
 };
+
+const postDescriptions: Record<string, { description: string; image: string }> = {
+  'math-has-no-bias': {
+    description: 'A fun and engaging math session at a government school led by Sabitha Rama Pandit — how the 24 Game taught children that math has no bias, and is for everyone.',
+    image: '/images/math has no bias.jpeg',
+  },
+  'does-counselling-help-children': {
+    description: 'Sankalpa For Change counsellors held space for children to speak about their goals, fears, and setbacks — showing that emotional wellbeing is just as important as academics.',
+    image: '/images/does counselling help children.jpeg',
+  },
+  'turning-study-into-habit': {
+    description: 'A study skills session with 8th and 9th graders exploring how to turn studying into a habit — with rhythm, consistency, and personal strategies that actually stick.',
+    image: '/images/turning study into a habit.jpeg',
+  },
+  'school-is-not-a-burden': {
+    description: "At 22.2%, Karnataka's secondary level school dropout rate is above the national average. Sankalpa For Change held a life skills session helping students see school as a bridge, not a burden.",
+    image: '/images/school is not a burden.jpeg',
+  },
+  'mobile-addiction-discussions': {
+    description: 'During a workshop with 8th and 9th graders, children themselves named the ill effects of mobile usage without any prompting — proving they need safe spaces, not more instructions.',
+    image: '/images/mobile addiction discussions 1.webp',
+  },
+  'level-up-for-college': {
+    description: 'Sankalpa For Change spent time with 11th and 12th grade girls in Mandya — exploring critical thinking, peer pressure, and what it means to level up and take that step toward college.',
+    image: '/images/level up for college.jpeg',
+  },
+  'study-skills-for-high-school': {
+    description: 'A session on Memory Skills and Time Management with 8th and 9th graders — introducing the SQ3R technique, mind maps, and daily routine pie charts to build effective study habits.',
+    image: '/images/study skills for high school.jpeg',
+  },
+  'parental-workshop': {
+    description: 'A Positive Parenting Workshop in Suvarna Badavane brought together new parents, parents of teenagers, and grandparents — exploring how connection matters more than control.',
+    image: '/images/parental workshop.jpeg',
+  },
+};
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ id: string }> }
+): Promise<Metadata> {
+  const { id } = await params;
+  const post = posts[id];
+  const meta = postDescriptions[id];
+
+  if (!post || !meta) return { title: 'Post Not Found' };
+
+  return {
+    title: post.title,
+    description: meta.description,
+    keywords: [
+      'Sankalpa For Change',
+      post.category,
+      'life skills Karnataka',
+      'children education India',
+      'school counselling',
+      'sankalpaforchange',
+    ],
+    openGraph: {
+      title: `${post.title} | Sankalpa For Change`,
+      description: meta.description,
+      type: 'article',
+      url: `https://sankalpaforchange.com/posts/${id}`,
+      images: [{ url: meta.image, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${post.title} | Sankalpa For Change`,
+      description: meta.description,
+      images: [meta.image],
+    },
+    alternates: {
+      canonical: `https://sankalpaforchange.com/posts/${id}`,
+    },
+  };
+}
 
 export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

@@ -1,4 +1,14 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'Stories, reflections, and insights from Sankalpa For Change — life skills sessions, counselling workshops, parenting programs, and more from schools across Karnataka.',
+  openGraph: {
+    title: 'Blog | Sankalpa For Change',
+    description: 'Read stories from our work in schools and communities across Karnataka.',
+  },
+};
 
 const allPosts = [
   {

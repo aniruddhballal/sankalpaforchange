@@ -19,8 +19,44 @@ const jakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Sankalpa For Change',
-  description: 'Empowering children through education, life skills, and emotional well-being.',
+  title: {
+    default: 'Sankalpa For Change',
+    template: '%s | Sankalpa For Change',
+  },
+  description: 'Sankalpa For Change works with schools and communities across Karnataka to equip children with life skills, emotional well-being tools, and counselling support.',
+  keywords: [
+    'Sankalpa For Change',
+    'children education Karnataka',
+    'life skills for children',
+    'emotional well-being children',
+    'school counselling Karnataka',
+    'child mental health India',
+    'youth life skills program',
+    'Bangalore NGO children',
+    'sankalpaforchange',
+  ],
+  authors: [{ name: 'Sankalpa For Change' }],
+  metadataBase: new URL('https://sankalpaforchange.com'),
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    siteName: 'Sankalpa For Change',
+    title: 'Sankalpa For Change — Nurturing Young Minds',
+    description: 'Equipping children with life skills and emotional tools to thrive in a complex world.',
+    url: 'https://sankalpaforchange.com',
+    images: [{ url: '/images/parental workshop.jpeg', width: 1200, height: 630, alt: 'Sankalpa For Change' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sankalpa For Change',
+    description: 'Equipping children with life skills and emotional tools to thrive in a complex world.',
+    images: ['/images/parental workshop.jpeg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

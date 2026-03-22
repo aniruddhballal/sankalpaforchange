@@ -1,6 +1,17 @@
 import Image from 'next/image';
 
+import type { Metadata } from 'next';
 import { Target, Users, ShieldCheck, Brain, HeartHandshake, CheckCircle } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Sankalpa For Change began as a heartfelt initiative by educators and counselors to bridge the gap between academic life and emotional well-being for children across Karnataka.',
+  openGraph: {
+    title: 'About Us | Sankalpa For Change',
+    description: 'Learn about our journey, programs, and values — working with schools and communities to equip children with life skills.',
+    images: [{ url: '/images/about 1.jpeg', width: 1200, height: 630, alt: 'Sankalpa For Change team' }],
+  },
+};
 
 export default function About() {
   return (
